@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /*　入力専用メソッド */
 
-public class InputWord {
+public class Util {
 
     public static String Scan() {
         Scanner scan = new Scanner(System.in);

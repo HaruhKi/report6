@@ -13,14 +13,17 @@ public class Main {
 
             System.out.println("【☆a　☆b　☆c】");
 
-            String ChoiceWord = InputWord.Scan();
+            String ChoiceWord = Util.Scan();
 
-            new ChoiceCount(ChoiceWord);
+            ChoiceCount aaa = new ChoiceCount(ChoiceWord);
 
-            Growth.Growth();
+            Growth hoge = new Growth(aaa,false);
+
+            hoge.GrowthPrint();
 
             System.out.println("\n\n");
 
         }
     }
+
 }

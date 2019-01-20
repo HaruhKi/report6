@@ -1,42 +1,58 @@
 package jp.ac.uryukyu.ie.e185706;
 
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Set;
+
 public class ChoiceCount {
 
-    private static int Acount = 0;
-    private static int Bcount = 0;
-    private static int Ccount = 0;
+
+    private Map<String, Integer> count;
+
+    public ChoiceCount(){
+
+        this.count = new HashMap<>(){
+            {
+                put("A",0);
+                put("B",0);
+                put("C",0);
+
+            }
+        };
+
+
+    }
 
     public ChoiceCount(String choiceWord) {
 
         switch (choiceWord){
             case "a":
                 System.out.println("^・ω・^ << a");
-                Acount++;
+                this.count.put("A", this.count.get("A")+1);
                 break;
             case "b":
-                System.out.println("^・ω・^ << b");
-                Bcount++;
+                System.out.println(
+
+                        "  　　 ∧＿∧ \n" +
+                        "　　　(´･ω･) \n" +
+                        "　　　(　つ┳⊃ \n" +
+                        "　　　ε(_)へ⌒ヽﾌ \n" +
+                        "　　 (　　(〃･з･) \n" +
+                        "≡≡　◎―◎ ⊃ ⊃");
+
+                this.count.put("B", this.count.get("B")+1);;
                 break;
             case "c":
                 System.out.println("^・ω・^ << c!");
-                Ccount++;
+                this.count.put("C", this.count.get("C")+1);
                 break;
 
         }
     }
 
-    public static int getAcount(){
-        return Acount;
-    }
 
+    public int getCount(String key){return this.count.get(key); }
 
-    public static int getBcount(){
-        return Bcount;
-    }
-
-
-    public static int getCcount(){
-        return Ccount;
-    }
+    public Set<String> getCountKeys(){ return this.count.keySet();}
 
 }

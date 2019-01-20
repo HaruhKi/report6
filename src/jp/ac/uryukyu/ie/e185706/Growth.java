@@ -2,11 +2,17 @@ package jp.ac.uryukyu.ie.e185706;
 
 public class Growth {
 
-    private boolean Life = false;
+    private boolean Life;
+    private ChoiceCount cc;
 
-    public static void Growth(){
+    public Growth(ChoiceCount cc, boolean Life){
+        this.Life = Life;
+        this.cc = cc;
+    }
 
-        if(ChoiceCount.getAcount()== 1 && ChoiceCount.getBcount()== 1 && ChoiceCount.getCcount() == 1){
+    public void GrowthPrint(){
+
+        if(cc.getCount("A")== 2 && cc.getCount("B")== 1){
 
             System.out.println("\n"+
                     "~~~~~~~~~~~~~~~\n"+
