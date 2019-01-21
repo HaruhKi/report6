@@ -21,22 +21,15 @@ public class ChoiceCount {
         };
     }
 
-    public ChoiceCount(String choiceWord) {
+    public void ChoiceCountSet(String choiceWord) {
 
         switch (choiceWord){
             case "1":
-                System.out.println("");
+                System.out.println("　( ・ω・ ) つ　　＜おいしい！　");
                 this.count.put("1", this.count.get("1")+1);
                 break;
             case "2":
-                System.out.println(
-
-                        "  　　 ∧＿∧ \n" +
-                        "　　　(´･ω･) \n" +
-                        "　　　(　つ┳⊃ \n" +
-                        "　　　ε(_)へ⌒ヽﾌ \n" +
-                        "　　 (　　(〃･з･) \n" +
-                        "≡≡　◎―◎ ⊃ ⊃");
+                System.out.println(" ");
 
                 this.count.put("2", this.count.get("2")+1);;
                 break;
