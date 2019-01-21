@@ -1,8 +1,6 @@
 
 package jp.ac.uryukyu.ie.e185706;
 
-import java.util.*;
-
 
 public class Main {
     public static void main(String[] args) {
@@ -10,26 +8,27 @@ public class Main {
 
         System.out.println("\nはじめまして！あなたのお名前を教えてね！");
 
-        Username name = new Username(Util.Scan());
-
+        User name = new User(Util.Scan());
         System.out.println( name.getName() + "って言うんだね！");
 
-        //System.out.println("早速だけど今日から君はこの子の育て親になってね！");
 
+        KeyControl gw = new KeyControl("KeyControlWindow",5,5);
+        gw.setVisible(true);
+        
 
 
 
         while (true) {
 
-            System.out.println("【☆a　☆b　☆c】");
+            System.out.println(" 何する？\n" + "【1: エサをあげる　2:一緒に遊ぶ　3:寝る】");
 
-            String ChoiceWord = Util.Scan();
+/*            String ChoiceWord = Util.Scan();
 
             ChoiceCount aaa = new ChoiceCount(ChoiceWord);
 
             Growth hoge = new Growth(aaa,false);
 
-            hoge.GrowthPrint();
+            hoge.GrowthPrint(); */
 
             System.out.println("\n\n");
 

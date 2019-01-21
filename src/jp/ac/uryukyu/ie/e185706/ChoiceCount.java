@@ -13,24 +13,22 @@ public class ChoiceCount {
 
         this.count = new HashMap<>(){
             {
-                put("A",0);
-                put("B",0);
-                put("C",0);
+                put("1",0);
+                put("2",0);
+                put("3",0);
 
             }
         };
-
-
     }
 
     public ChoiceCount(String choiceWord) {
 
         switch (choiceWord){
-            case "a":
-                System.out.println("^・ω・^ << a");
-                this.count.put("A", this.count.get("A")+1);
+            case "1":
+                System.out.println("");
+                this.count.put("1", this.count.get("1")+1);
                 break;
-            case "b":
+            case "2":
                 System.out.println(
 
                         "  　　 ∧＿∧ \n" +
@@ -40,11 +38,11 @@ public class ChoiceCount {
                         "　　 (　　(〃･з･) \n" +
                         "≡≡　◎―◎ ⊃ ⊃");
 
-                this.count.put("B", this.count.get("B")+1);;
+                this.count.put("2", this.count.get("2")+1);;
                 break;
-            case "c":
+            case "3":
                 System.out.println("^・ω・^ << c!");
-                this.count.put("C", this.count.get("C")+1);
+                this.count.put("3", this.count.get("3")+1);
                 break;
 
         }
