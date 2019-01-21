@@ -8,17 +8,42 @@ public class Growth {
     private Creature ct;
     private int growLevel = 0;
 
+    /**
+     *
+     * Growth -エモジの育成過程に関するクラス
+     * Life,growLevelは共に分岐過程で必要になった変数
+     * ccで選択肢の回数を取得しctでエモジの名前を取得している
+     *
+     */
+
+
     public void setCt(Creature ct) {
         this.ct = ct;
     }
+    public boolean isLife() {
+        return Life;
+    }
+
+    /**
+     *
+     * コンストラクタ
+     * このクラスで使用するためのChoiceCount変数を取得するためのメソッド
+     *
+     * @param cc プレイヤーの選択肢が保存されている
+     *
+     */
 
     public Growth(ChoiceCount cc){
         this.cc = cc;
     }
 
-    public boolean isLife() {
-        return Life;
-    }
+
+    /**
+     *
+     * 一定数エモジを育てると成長を知らせるメソッド
+     *
+     */
+
 
     public void GrowthPrint(){
 

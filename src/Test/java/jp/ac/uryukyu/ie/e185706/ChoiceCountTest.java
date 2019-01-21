@@ -8,7 +8,9 @@ import java.util.Map;
 import static org.junit.jupiter.api.Assertions.*;
 
 class ChoiceCountTest {
-    
+
+    // 選んだ選択肢がしっかりMapクラスを利用したChoiceCountSet(key)で加算されているか確認している
+
     @Test
     void choiceCountSet() {
 

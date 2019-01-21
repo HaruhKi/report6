@@ -8,9 +8,17 @@ public class ChoiceCount {
 
     private Map<String, Integer> count;
 
+
+    /**
+     *
+     * ChoiceCount -HashMapクラスを利用したエモジを育てる選択肢の処理クラス
+     * ChoiceCount()ではHashMapクラスに初期値を設定している
+     *
+     */
+
     public ChoiceCount(){
 
-        this.count = new HashMap<>(){
+        this.count = new HashMap<String, Integer>(){
             {
                 put("1",0);
                 put("2",0);
@@ -19,6 +27,15 @@ public class ChoiceCount {
             }
         };
     }
+
+    /**
+     *
+     * 選択肢別の処理
+     *
+     *
+     * @param choiceWord プレイヤーが選んだ選択肢
+     *
+     */
 
     public void ChoiceCountSet(String choiceWord) {
 
@@ -43,7 +60,13 @@ public class ChoiceCount {
         }
     }
 
-
+    /**
+     *
+     * ChoiceCountクラスで使われているmapの要素(value)を取得するためのメソッド
+     *
+     * @return count.get(key)
+     *
+     */
     public int getCount(String key){return this.count.get(key); }
 
 }
