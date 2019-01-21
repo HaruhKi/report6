@@ -6,6 +6,7 @@ public class Growth {
 
     private ChoiceCount cc;
     private Creature ct;
+    private int growLevel = 0;
 
     public void setCt(Creature ct) {
         this.ct = ct;
@@ -21,9 +22,9 @@ public class Growth {
 
     public void GrowthPrint(){
 
-        if( cc.getCount("1") > 2 && cc.getCount("2") > 2 &&cc.getCount("3") > 2){
+        if( cc.getCount("1") > 2 && cc.getCount("2") > 2 &&cc.getCount("3") > 1){
 
-            System.out.println("\n\n\n △　おめでとう！" + ct.getName() + "は進化した！");
+            System.out.println("\n\n\n△　おめでとう！" +"《" + ct.getName() +"》" + "は進化した！");
             System.out.println("\n"+
                     "    ∩  ∩      \n"+
                     "　( ・ω・ )ノ　＜今日から自由だ！\n"+
@@ -31,14 +32,20 @@ public class Growth {
                     "\n");
             this.Life = true;
 
-        }else if(cc.getCount("1") > 1 &&cc.getCount("2") > 2) {
+        }
+        if (growLevel == 0){
 
-            System.out.println("\n\n\n △　おめでとう！" + ct.getName() + "は進化した！");
+            if(cc.getCount("1") > 1 &&cc.getCount("2") > 1) {
+
+            System.out.println("\n\n\n△　おめでとう！" +"《" + ct.getName() +"》" + "は進化した！");
             System.out.println("\n" +
                     "    ∩  ∩      \n" +
                     "　( ・ω・ )ノ　＜お世話してくれてありがとう！\n" +
                     "\n");
 
+            this.growLevel = 1 ;
+
+            }
         }
     }
 }

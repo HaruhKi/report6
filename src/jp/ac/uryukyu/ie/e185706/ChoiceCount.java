@@ -2,7 +2,6 @@ package jp.ac.uryukyu.ie.e185706;
 
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Set;
 
 public class ChoiceCount {
 
@@ -25,17 +24,20 @@ public class ChoiceCount {
 
         switch (choiceWord){
             case "1":
-                System.out.println("　( ・ω・ ) つ　　＜おいしい！　");
+                System.out.println("　( ・ω・ )つ-□-▷○　＜おいしい！　");
                 this.count.put("1", this.count.get("1")+1);
                 break;
             case "2":
-                System.out.println(" ");
+                System.out.println("　（　　・ω）y-o0０OＯ○(シャボン玉)");
 
                 this.count.put("2", this.count.get("2")+1);;
                 break;
             case "3":
-                System.out.println("^・ω・^ << c!");
+                System.out.println("　zzz...（¦[▓▓]）　");
                 this.count.put("3", this.count.get("3")+1);
+                break;
+            default:
+                System.out.println("半角数字で選択肢から選ぼう");
                 break;
 
         }
@@ -43,7 +45,5 @@ public class ChoiceCount {
 
 
     public int getCount(String key){return this.count.get(key); }
-
-    public Set<String> getCountKeys(){ return this.count.keySet();}
 
 }

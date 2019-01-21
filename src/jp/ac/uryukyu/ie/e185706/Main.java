@@ -2,8 +2,6 @@
 package jp.ac.uryukyu.ie.e185706;
 
 
-import java.awt.*;
-
 public class Main {
     public static void main(String[] args) {
 
@@ -36,7 +34,7 @@ public class Main {
 
         }
 
-        System.out.println(cname.getName()+"は独り立ちした！");
+        System.out.println("\n　《"+cname.getName()+"》は独り立ちした！");
 
 
     }
